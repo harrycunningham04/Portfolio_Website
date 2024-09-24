@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  </head>
+  <body>
+    <nav>
+      <h2 id="logo">Harry Cunningham</h2>
+      <ul class="navigation-items">
+        <li class="navigation-item"><a href="#about-me">About Me</a></li>
+        <li class="navigation-item"><a href="#projects">Projects</a></li>
+        <li class="navigation-item"><a href="#skills">Skills</a></li>
+        <li class="navigation-item"><a href='#contact'>Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="about-me">
+        <div class="about-me-container">
+          <div class="about-me-text-container">
+            <h2>About Me</h2>
+            <p>
+              Hello, my name is Harry Cunningham and I am <span id="age-container">0</span> years old.
+              I am a student at Brighton University studing 'Computer Science BSc (Hons)' with the aim to get 
+              a first degree. I previously went to The Henley College to complete my A-Levels where I studied computer 
+              science, mathematics and economics. While studying I was playing rugby as the captain of the rugby team 
+              which allowed me to gain excellent time management skills as well as leadership skills that have become 
+              invaluable to me since.
+            </p>
+            <p>
+                I have work experience in two sectors. The first is working at <a href="https://www.badgemorepark.com/">Badgemore park golf club</a>
+                This has been my job since June 2021. I have been working in the front of house role that has taught me the importance 
+                of customer satisfaction, have trained and supervised new front-of-house team members to ensure that all customer service 
+                standards were met. This was useful training in my personal development as it allowed me to improve my communication skills
+                and also to work well under pressure. 
+                The second is working with a member of the golf club on a website and database for hundreds of golfers that gets used on major 
+                competiton days. My role was to work alongside the man who created the whole wesbite and database and imrpove the functionality 
+                of the website on mobile devices so that it can improve the user experience on competition days. As the website was originally 
+                designed to be used on a laptop that on phones it became very slow as everyone was accessing the site to view results so I needed 
+                to improve the efficency of the site to allow for better user experience. I had to meet requirements of user needs and requirements 
+                for visual wants as well adding features that has increased the functionality of the mobile version of the website.
+            </p>
+            <p>
+                In my free time I am currently completing courses on <a href="https://www.codecademy.com/learn">Codecademy</a>
+                which has been one of the best decisions I have made. It has allowed me to progress further with my coding then I 
+                ever believed possible, as well as guiding me to create projects that are available below to be seen. 
+            </p>
+            <p>
+                Outside of programming I am a very active person who goes to the gym 6 days a week so improve my physical health as 
+                well an avid golfer. My handicap is currently 20.0 which I am working on lowing as I have been working on my putting skills 
+                continuously, as well as my ball stirking so that I have consistent flight of the ball.
+            </p>
+            <p>
+              Fun fact! I've been programing for
+              <span id="time-container">0</span> Minutes!
+            </p>
+          </div>
+          <img
+            src="I am good looking ;/"
+            alt="A photo of myself"
+            class="portrait"
+          >
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <!-- Below is a copy of the details class that allows me to add more projects to this section as I create more.
+        <details class="project">
+          <summary class="project-title">
+            <h3>Name of project</h3>
+          </summary>
+          <img
+            src="hi"
+            alt="Description of photo"
+            class="project-image"
+          />
+          <p class="project-description">
+            Description of the project in a few lines that describe the overall project
+          </p>
+        </details>
+        -->
+
+        <!--
+        Want to add group project to show me working in a team
+        Add at the top website with bill showing before and after my additions
+        codecademy projects
+        final year big project added as i work on it and figure out what it is
+        -->
+
+        <details class="project">
+            <summary class="project-title">
+              <h3>Name of project</h3>
+            </summary>
+            <img
+              src="hi"
+              alt="Description of photo"
+              class="project-image"
+            >
+            <p class="project-description">
+              Description of the project in a few lines that describe the overall project
+            </p>
+          </details>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <div id="skills-container">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+          <i class="fab fa-aws"></i>
+          <i class="fab fa-figma"></i>
+          <i class="fab fa-git"></i>
+          <i class="fab fa-chrome"></i>
+          <i class="fas fa-terminal"></i>
+          <i class="fab fa-node"></i>
+          <i class="fab fa-github"></i>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact">
+       Made by Harry Cunningham
+       <br>
+       <a href="https://www.instagram.com/harry9.cunningham?igsh=NGs2d202dW5tOW1v&utm_source=qr" target="_blank"><i class="fab fa-instagram w3-hover-opacity"></i></a>
+       <a href="https://www.linkedin.com/in/harry-cunningham-039b7a2b4" target="_blank"><i class="fab fa-linkedin w3-hover-opacity"></i></a>
+       <a href="https://github.com/harrycunningham04" target="_blank"><i class="fab fa-github"></i></a>
+       
+    </footer>
+  </body>
+  <script>
+    const timeContainer = document.getElementById("time-container");
+    const START_DATE = "10-09-2018";
+    const START_DATE_TIME = new Date(START_DATE);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - START_DATE_TIME.getTime()) / 1000
+      );
+      const minutes = Math.floor(difference/60);
+
+      timeContainer.innerText = intlNumberFormatter.format(minutes);
+    }, 1000);
+
+    const ageContainer = document.getElementById("age-container");
+const BIRTH_DATE = "01-05-2004";
+const BIRTH_DATE_TIME = new Date(BIRTH_DATE);
+const intlYearFormatter = new Intl.NumberFormat("en-US");
+
+setInterval(() => {
+  const now = new Date();
+  const ageInMillis = now.getTime() - BIRTH_DATE_TIME.getTime();
+  const ageInSeconds = ageInMillis / 1000;
+  const ageInMinutes = ageInSeconds / 60;
+  const ageInHours = ageInMinutes / 60;
+  const ageInDays = ageInHours / 24;
+  const ageInYears = ageInDays / 365.25;
+
+  ageContainer.innerHTML = intlYearFormatter.format(Math.floor(ageInYears));
+}, 1000);
+
+  </script>
+</html>
